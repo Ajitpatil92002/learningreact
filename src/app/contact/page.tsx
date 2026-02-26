@@ -1,54 +1,22 @@
 import Link from 'next/link';
 
-export default function Home() {
+export default function Contact() {
   return (
     <div className="portfolio-card">
-      <div className="hero-section">
-        <nav className="nav">
+      <div className="hero-section" style={{ paddingBottom: '40px' }}>
+        <nav className="nav" style={{ marginBottom: '20px' }}>
           <h1>My Portfolio</h1>
           <div className="nav-links">
-            <Link href="/"><span className="active">Home</span></Link>
+            <Link href="/"><span>Home</span></Link>
             <Link href="/about"><span>About</span></Link>
-            <Link href="/contact"><span>Contact</span></Link>
+            <Link href="/contact"><span className="active">Contact</span></Link>
           </div>
         </nav>
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1>Hello, I'm John Doe</h1>
-            <p>Aspiring Web Developer</p>
-            <button className="download-btn">
-              Download Resume
-            </button>
-          </div>
-          <div className="profile-img-container">
-            <img
-              className="profile-img"
-              src="https://avatars.githubusercontent.com/u/124599?v=4"
-              alt="John Doe"
-            />
-          </div>
-        </div>
       </div>
 
       <div className="content-section">
-        <section className="about-me">
-          <h2 className="section-title">About Me</h2>
-          <p>
-            I am an aspiring web developer eager <strong>to learn and apply</strong> the field of development. I have a passion for creating user-friendly and responsive websites.
-          </p>
-        </section>
-
-        <section className="skills">
-          <h2 className="section-title">Skills</h2>
-          <div className="skills-container">
-            <span className="skill-badge skill-html">HTML</span>
-            <span className="skill-badge skill-css">CSS</span>
-            <span className="skill-badge skill-js">JavaScript</span>
-          </div>
-        </section>
-
         <section className="contact">
-          <h2 className="section-title">Contact</h2>
+          <h2 className="section-title">Contact Information</h2>
           <div className="contact-grid">
             <div className="contact-item">
               <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
@@ -67,6 +35,13 @@ export default function Home() {
               <span>Anytown, USA</span>
             </div>
           </div>
+
+          <form className="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" className="submit-btn">Send Message</button>
+          </form>
         </section>
       </div>
     </div>
