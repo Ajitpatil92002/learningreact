@@ -16,7 +16,7 @@ export function Login() {
           <label htmlFor="">Password</label>
           <input type="text" name="" id="" placeholder='password' onChange={(e) => setpassword(e.target.value)} />
         </div>
-        <button className='submit-btn' onClick={(e) => {
+        <button className='submit-btn' type='button' onClick={(e) => {
           console.log(email);
           console.log(password);
         }}>Submit</button>
